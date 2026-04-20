@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
-import { sql } from "@/lib/db";
+import { getSql } from "@/lib/db";
 
 export async function POST() {
+  const sql = getSql();
   await sql`
     CREATE TABLE IF NOT EXISTS posts (
       id TEXT PRIMARY KEY,

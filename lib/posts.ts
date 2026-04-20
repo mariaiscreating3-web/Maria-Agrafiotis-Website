@@ -1,4 +1,4 @@
-import { sql } from "./db";
+import { getSql } from "./db";
 export type { Post } from "./post-types";
 export { CATEGORIES } from "./post-types";
 import type { Post } from "./post-types";
@@ -19,16 +19,19 @@ function rowToPost(row: any): Post {
 }
 
 export async function getAllPosts(): Promise<Post[]> {
+  const sql = getSql();
   const rows = await sql`SELECT * FROM posts ORDER BY date DESC`;
   return rows.map(rowToPost);
 }
 
 export async function getPostById(id: string): Promise<Post | undefined> {
+  const sql = getSql();
   const rows = await sql`SELECT * FROM posts WHERE id = ${id}`;
   return rows[0] ? rowToPost(rows[0]) : undefined;
 }
 
 export async function createPost(data: Omit<Post, "id">): Promise<Post> {
+  const sql = getSql();
   const id = Date.now().toString();
   const rows = await sql`
     INSERT INTO posts (id, title, slug, category, excerpt, content, date, published, featured)
@@ -42,6 +45,7 @@ export async function updatePost(id: string, data: Partial<Post>): Promise<Post 
   const current = await getPostById(id);
   if (!current) return null;
   const u = { ...current, ...data };
+  const sql = getSql();
   const rows = await sql`
     UPDATE posts
     SET title = ${u.title}, slug = ${u.slug}, category = ${u.category},
@@ -54,6 +58,7 @@ export async function updatePost(id: string, data: Partial<Post>): Promise<Post 
 }
 
 export async function deletePost(id: string): Promise<boolean> {
+  const sql = getSql();
   const existing = await getPostById(id);
   if (!existing) return false;
   await sql`DELETE FROM posts WHERE id = ${id}`;
@@ -61,21 +66,25 @@ export async function deletePost(id: string): Promise<boolean> {
 }
 
 export async function getPublishedPosts(): Promise<Post[]> {
+  const sql = getSql();
   const rows = await sql`SELECT * FROM posts WHERE published = TRUE ORDER BY date DESC`;
   return rows.map(rowToPost);
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {
+  const sql = getSql();
   const rows = await sql`SELECT * FROM posts WHERE slug = ${slug} AND published = TRUE`;
   return rows[0] ? rowToPost(rows[0]) : undefined;
 }
 
 export async function getPostsByCategory(category: string): Promise<Post[]> {
+  const sql = getSql();
   const rows = await sql`SELECT * FROM posts WHERE category = ${category} AND published = TRUE ORDER BY date DESC`;
   return rows.map(rowToPost);
 }
 
 export async function getFeaturedPost(): Promise<Post | undefined> {
+  const sql = getSql();
   const rows = await sql`SELECT * FROM posts WHERE featured = TRUE AND published = TRUE ORDER BY date DESC LIMIT 1`;
   return rows[0] ? rowToPost(rows[0]) : undefined;
 }
