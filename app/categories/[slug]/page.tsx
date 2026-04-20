@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
   const meta = categoryMeta[slug];
-  const posts = getPostsByCategory(slug);
+  const posts = await getPostsByCategory(slug);
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",

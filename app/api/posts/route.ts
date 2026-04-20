@@ -2,13 +2,13 @@ import { NextResponse } from "next/server";
 import { getAllPosts, createPost } from "@/lib/posts";
 
 export async function GET() {
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
   return NextResponse.json(posts);
 }
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const post = createPost({
+  const post = await createPost({
     title: body.title ?? "",
     slug: body.slug ?? "",
     category: body.category ?? "",

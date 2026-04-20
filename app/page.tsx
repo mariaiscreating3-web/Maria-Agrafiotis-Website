@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
-  const featuredPost = getFeaturedPost();
-  const recentPosts = getPublishedPosts().slice(0, 4);
+export default async function Page() {
+  const featuredPost = await getFeaturedPost();
+  const recentPosts = (await getPublishedPosts()).slice(0, 4);
 
   return <HomeContent featuredPost={featuredPost} recentPosts={recentPosts} />;
 }

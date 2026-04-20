@@ -12,9 +12,13 @@ import type { LangCode } from "@/lib/translations";
 const languages: { code: LangCode; label: string }[] = [
   { code: "EN", label: "English" },
   { code: "EL", label: "Ελληνικά" },
+  { code: "AG", label: "Ἀρχαία Ἑλληνική" },
   { code: "DE", label: "Deutsch" },
   { code: "ES", label: "Español" },
   { code: "FR", label: "Français" },
+  { code: "AR", label: "العربية" },
+  { code: "TH", label: "ภาษาไทย" },
+  { code: "VI", label: "Tiếng Việt" },
 ];
 
 const categorySlugs = [
