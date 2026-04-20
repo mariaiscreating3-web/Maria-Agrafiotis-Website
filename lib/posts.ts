@@ -19,15 +19,19 @@ function rowToPost(row: any): Post {
 }
 
 export async function getAllPosts(): Promise<Post[]> {
-  const sql = getSql();
-  const rows = await sql`SELECT * FROM posts ORDER BY date DESC`;
-  return rows.map(rowToPost);
+  try {
+    const sql = getSql();
+    const rows = await sql`SELECT * FROM posts ORDER BY date DESC`;
+    return rows.map(rowToPost);
+  } catch { return []; }
 }
 
 export async function getPostById(id: string): Promise<Post | undefined> {
-  const sql = getSql();
-  const rows = await sql`SELECT * FROM posts WHERE id = ${id}`;
-  return rows[0] ? rowToPost(rows[0]) : undefined;
+  try {
+    const sql = getSql();
+    const rows = await sql`SELECT * FROM posts WHERE id = ${id}`;
+    return rows[0] ? rowToPost(rows[0]) : undefined;
+  } catch { return undefined; }
 }
 
 export async function createPost(data: Omit<Post, "id">): Promise<Post> {
@@ -42,49 +46,59 @@ export async function createPost(data: Omit<Post, "id">): Promise<Post> {
 }
 
 export async function updatePost(id: string, data: Partial<Post>): Promise<Post | null> {
-  const current = await getPostById(id);
-  if (!current) return null;
-  const u = { ...current, ...data };
-  const sql = getSql();
-  const rows = await sql`
-    UPDATE posts
-    SET title = ${u.title}, slug = ${u.slug}, category = ${u.category},
-        excerpt = ${u.excerpt}, content = ${u.content}, date = ${u.date},
-        published = ${u.published}, featured = ${u.featured}
-    WHERE id = ${id}
-    RETURNING *
-  `;
-  return rows[0] ? rowToPost(rows[0]) : null;
+  try {
+    const current = await getPostById(id);
+    if (!current) return null;
+    const u = { ...current, ...data };
+    const sql = getSql();
+    const rows = await sql`
+      UPDATE posts
+      SET title = ${u.title}, slug = ${u.slug}, category = ${u.category},
+          excerpt = ${u.excerpt}, content = ${u.content}, date = ${u.date},
+          published = ${u.published}, featured = ${u.featured}
+      WHERE id = ${id}
+      RETURNING *
+    `;
+    return rows[0] ? rowToPost(rows[0]) : null;
+  } catch { return null; }
 }
 
 export async function deletePost(id: string): Promise<boolean> {
-  const sql = getSql();
-  const existing = await getPostById(id);
-  if (!existing) return false;
-  await sql`DELETE FROM posts WHERE id = ${id}`;
-  return true;
+  try {
+    const sql = getSql();
+    await sql`DELETE FROM posts WHERE id = ${id}`;
+    return true;
+  } catch { return false; }
 }
 
 export async function getPublishedPosts(): Promise<Post[]> {
-  const sql = getSql();
-  const rows = await sql`SELECT * FROM posts WHERE published = TRUE ORDER BY date DESC`;
-  return rows.map(rowToPost);
+  try {
+    const sql = getSql();
+    const rows = await sql`SELECT * FROM posts WHERE published = TRUE ORDER BY date DESC`;
+    return rows.map(rowToPost);
+  } catch { return []; }
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {
-  const sql = getSql();
-  const rows = await sql`SELECT * FROM posts WHERE slug = ${slug} AND published = TRUE`;
-  return rows[0] ? rowToPost(rows[0]) : undefined;
+  try {
+    const sql = getSql();
+    const rows = await sql`SELECT * FROM posts WHERE slug = ${slug} AND published = TRUE`;
+    return rows[0] ? rowToPost(rows[0]) : undefined;
+  } catch { return undefined; }
 }
 
 export async function getPostsByCategory(category: string): Promise<Post[]> {
-  const sql = getSql();
-  const rows = await sql`SELECT * FROM posts WHERE category = ${category} AND published = TRUE ORDER BY date DESC`;
-  return rows.map(rowToPost);
+  try {
+    const sql = getSql();
+    const rows = await sql`SELECT * FROM posts WHERE category = ${category} AND published = TRUE ORDER BY date DESC`;
+    return rows.map(rowToPost);
+  } catch { return []; }
 }
 
 export async function getFeaturedPost(): Promise<Post | undefined> {
-  const sql = getSql();
-  const rows = await sql`SELECT * FROM posts WHERE featured = TRUE AND published = TRUE ORDER BY date DESC LIMIT 1`;
-  return rows[0] ? rowToPost(rows[0]) : undefined;
+  try {
+    const sql = getSql();
+    const rows = await sql`SELECT * FROM posts WHERE featured = TRUE AND published = TRUE ORDER BY date DESC LIMIT 1`;
+    return rows[0] ? rowToPost(rows[0]) : undefined;
+  } catch { return undefined; }
 }
