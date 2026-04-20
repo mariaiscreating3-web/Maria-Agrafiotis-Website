@@ -10,8 +10,10 @@ export function middleware(req: NextRequest) {
   if (auth) {
     const [scheme, encoded] = auth.split(" ");
     if (scheme === "Basic" && encoded) {
-      const decoded = Buffer.from(encoded, "base64").toString("utf-8");
-      const [user, pass] = decoded.split(":");
+      const decoded = atob(encoded);
+      const colon = decoded.indexOf(":");
+      const user = decoded.slice(0, colon);
+      const pass = decoded.slice(colon + 1);
       if (user === ADMIN_USER && pass === ADMIN_PASS) {
         return NextResponse.next();
       }
