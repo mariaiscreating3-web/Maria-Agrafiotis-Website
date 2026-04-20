@@ -706,7 +706,6 @@ export const translations = {
       description: "Livres, recherches et lectures complémentaires seront listés ici",
     },
   },
-};
 
   // ─────────────────────────────────────────────────────────────────
   AG: {
@@ -985,6 +984,286 @@ export const translations = {
       title: "المصادر",
       comingSoon: "مصادر قريباً",
       description: "ستُدرج هنا الكتب والأبحاث والقراءات الإضافية",
+    },
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  TH: {
+    subtitle: "จิตวิทยา · บาดแผลทางจิตใจ · อาชญากรรม · พฤติกรรมมนุษย์",
+    nav: {
+      home: "หน้าหลัก",
+      about: "เกี่ยวกับ",
+      categories: "หมวดหมู่",
+      contact: "ติดต่อ",
+      resources: "แหล่งข้อมูล",
+      browseByCategory: "เรียกดูตามหมวดหมู่",
+      viewAllCategories: "ดูหมวดหมู่ทั้งหมด →",
+    },
+    footer: {
+      subtitle: "จิตวิทยา · บาดแผลทางจิตใจ · อาชญากรรม · พฤติกรรมมนุษย์",
+    },
+    homepage: {
+      introQuote:
+        "ฉันสร้างเว็บไซต์นี้ขึ้นมาเพราะฉันไม่เชื่อว่าอาชญากรรมที่เลวร้ายที่สุดในสังคมเป็นสิ่งที่หลีกเลี่ยงไม่ได้",
+      intro1:
+        "บ่อยครั้งที่ผู้คนให้ความสนใจก็ต่อเมื่อความเสียหายเกิดขึ้นแล้ว สิ่งที่ฉันสนใจมากกว่าคือสิ่งที่เกิดขึ้นก่อนหน้านั้น ไม่ว่าจะเป็นสัญญาณเตือน ประสบการณ์วัยเด็ก พลวัตของครอบครัว บาดแผลทางอารมณ์ การบาดเจ็บทางจิตใจที่ไม่ได้รับการรักษา และความไม่มั่นคง",
+      intro2:
+        "หนึ่งในสาขาที่ฉันคิดว่าสำคัญที่สุดและพูดถึงได้ยากที่สุดคือบทบาทของวัยเด็กและการเลี้ยงดู ฉันเชื่อว่าอาชญากรรมและพฤติกรรมที่น่าวิตกที่สุดหลายอย่างสามารถสืบย้อนไปถึงความสัมพันธ์ในช่วงแรก โดยเฉพาะความสัมพันธ์ระหว่างเด็กกับผู้ปกครอง",
+      intro3:
+        "หัวข้อเหล่านี้น่าอึดอัด ละเอียดอ่อน และมักเข้าใจผิดกัน ซึ่งนั่นคือเหตุผลที่ฉันเชื่อว่าควรพูดคุยถึงอย่างเปิดเผยมากขึ้น จิตพลวัต พฤติกรรมมนุษย์ อารมณ์ความรู้สึก และเหตุผลลึกๆ ที่อยู่เบื้องหลังสิ่งที่ผู้คนทำ เว็บไซต์นี้ไม่ใช่แค่เรื่องอาชญากรรม แต่เป็นเรื่องของการเข้าใจผู้คน",
+      pullQuote:
+        "เป้าหมายของฉันคือการทำให้หัวข้อเหล่านี้เข้าใจง่ายขึ้น เข้าถึงได้สำหรับคนทั่วไป และไม่สามารถเพิกเฉยได้ เพราะการตระหนักรู้มีความสำคัญ",
+      featuredComingSoon: "บทความแนะนำจะมาเร็วๆ นี้",
+      featuredDescription: "ส่วนนี้จะนำเสนอทฤษฎีหรือบทความใหม่ทุกสัปดาห์",
+      categoriesLabel: "หมวดหมู่",
+      viewAll: "ดูทั้งหมด →",
+      letsTalk: "มาพูดคุยกัน",
+      theseConversations: "การสนทนาเหล่านี้\nจำเป็นต้องเกิดขึ้น",
+      silenceText:
+        "ความเงียบคือสิ่งที่อนุญาตให้รูปแบบที่เป็นอันตรายดำเนินต่อไป ไม่ว่าคุณจะกำลังศึกษาจิตวิทยา ทำงานในสาขานี้ หรือเพียงแค่เป็นคนที่คิดถึงผู้คนอย่างลึกซึ้ง อย่ากลัวที่จะติดต่อ",
+      startConversation: "เริ่มการสนทนา",
+      talkQuote:
+        "บอกฉันเกี่ยวกับทฤษฎี ความคิดเห็น คำถามของคุณ หรือหัวข้อที่คุณคิดว่าสมควรได้รับความสนใจมากขึ้น ฉันต้องการให้สิ่งนี้เป็นมากกว่าเว็บไซต์ เป็นสถานที่ที่ผู้คนสามารถคิด ตั้งคำถาม และมีบทสนทนาที่ซื่อสัตย์ได้",
+    },
+    about: {
+      label: "เกี่ยวกับ",
+      openingQuote:
+        "ฉันสร้างเว็บไซต์นี้ขึ้นมาเพราะฉันไม่เชื่อว่าอาชญากรรมที่เลวร้ายที่สุดในสังคมเป็นสิ่งที่หลีกเลี่ยงไม่ได้",
+      para1:
+        "บ่อยครั้งที่ผู้คนให้ความสนใจก็ต่อเมื่อความเสียหายเกิดขึ้นแล้ว สิ่งที่ฉันสนใจมากกว่าคือสิ่งที่เกิดขึ้นก่อนหน้านั้น",
+      para2:
+        "สัญญาณเตือน ประสบการณ์วัยเด็ก พลวัตของครอบครัว บาดแผลทางอารมณ์ การบาดเจ็บทางจิตใจที่ไม่ได้รับการรักษา ความไม่มั่นคง",
+      para3:
+        "หนึ่งในสาขาที่สำคัญที่สุดคือบทบาทของวัยเด็กและการเลี้ยงดู พฤติกรรมที่น่าวิตกกังวลหลายอย่างสามารถสืบย้อนไปถึงความสัมพันธ์ในช่วงแรก โดยเฉพาะพันธะระหว่างแม่กับลูก",
+      para4:
+        "หัวข้อเหล่านี้น่าอึดอัดและมักเข้าใจผิดกัน ซึ่งนั่นคือเหตุผลที่ควรพูดถึงอย่างเปิดเผยมากขึ้น",
+      para5:
+        "เว็บไซต์นี้ไม่ใช่แค่เรื่องอาชญากรรมหรือโศกนาฏกรรม แต่เป็นเรื่องของการเข้าใจผู้คน เป้าหมายของฉันคือทำให้หัวข้อเหล่านี้เข้าถึงได้และไม่สามารถเพิกเฉยได้",
+      pullQuote:
+        "ฉันพบว่ามันยากที่จะพูดเกี่ยวกับผลลัพธ์จากการวิจัยของฉันในแบบที่เปิดตาผู้คนได้จริงๆ",
+      areasOfFocus: "สาขาที่มุ่งเน้น",
+      focusItems: [
+        "จิตพลวัต",
+        "วัยเด็กและการผูกพันในช่วงแรก",
+        "บาดแผลทางจิตใจและการรักษา",
+        "จิตวิทยาอาชญากรรม",
+        "ความผิดปกติของครอบครัว",
+        "พฤติกรรมมนุษย์และแรงจูงใจ",
+      ],
+      wantToTalk: "ต้องการพูดคุยไหม?",
+      theseConversations: "การสนทนาเหล่านี้คุ้มค่าที่จะทำ",
+      getInTouch: "ติดต่อ",
+    },
+    contact: {
+      label: "ติดต่อ",
+      title: "มาพูดคุยกัน",
+      openingQuote: "ความเงียบไม่เคยปกป้องผู้คนได้",
+      para1:
+        "เราเห็นสิ่งนี้ซ้ำแล้วซ้ำเล่ากับบาดแผลทางจิตใจ การทารุณกรรม ความรุนแรง การติดยา ความผิดปกติของครอบครัว การฆ่าตัวตาย และอาชญากรรม ผู้คนเงียบเพราะความกลัว ความละอาย หรือการปฏิเสธ แต่ความเงียบคือสิ่งที่อนุญาตให้รูปแบบที่เป็นอันตรายดำเนินต่อไป",
+      para2:
+        "การสนทนาเหล่านี้จำเป็นต้องเกิดขึ้น ไม่ว่าคุณจะกำลังศึกษาจิตวิทยา ทำงานในสาขานี้ หรือเพียงแค่คิดถึงผู้คนอย่างลึกซึ้ง อย่ากลัวที่จะติดต่อ",
+      para3:
+        "บอกฉันเกี่ยวกับทฤษฎี ความคิดเห็น คำถามของคุณ หรือหัวข้อที่สมควรได้รับความสนใจมากขึ้น ฉันยินดีที่จะรับฟัง",
+      reachOutItems: [
+        "แบ่งปันทฤษฎีหรือความคิดเห็น",
+        "ถามคำถาม",
+        "เสนอหัวข้อ",
+        "ให้ข้อเสนอแนะเกี่ยวกับเว็บไซต์",
+      ],
+      name: "ชื่อ",
+      email: "อีเมล",
+      subject: "หัวข้อ",
+      message: "ข้อความ",
+      messagePlaceholder: "ทฤษฎี คำถาม ความคิดเห็น หรือข้อเสนอหัวข้อของคุณ...",
+      send: "ส่งข้อความ",
+      thankYouTitle: "ขอบคุณที่ติดต่อมา",
+      thankYouBody:
+        "ฉันได้รับข้อความของคุณแล้วและจะตอบกลับคุณ การสนทนาเหล่านี้มีความสำคัญ ฉันดีใจที่คุณเริ่มต้นมันขึ้นมา",
+    },
+    categories: {
+      browse: "เรียกดู",
+      title: "หมวดหมู่",
+      articlesLabel: "บทความ",
+      articlesComingSoon: "บทความจะมาเร็วๆ นี้",
+      articlesDescription: "บทความใหม่จะปรากฏที่นี่เมื่อเผยแพร่",
+      items: {
+        "core-theories": {
+          label: "ทฤษฎีหลัก",
+          description: "ความคิดที่ซับซ้อน คำถามที่น่าอึดอัด และการสนทนาที่คุ้มค่าที่จะมี",
+          longDescription:
+            "ส่วนนี้สำรวจทฤษฎีทางจิตวิทยาพื้นฐานที่เป็นรากฐานของงานด้านบาดแผลทางจิตใจ พฤติกรรม และอาชญากรรม ตั้งแต่ทฤษฎีการผูกพันไปจนถึงจิตพลวัต",
+        },
+        "victims-and-healing": {
+          label: 'เหยื่อและ "การรักษา"',
+          description: "ทำความเข้าใจบาดแผลทางจิตใจเพื่อให้เหยื่อได้รับความช่วยเหลือที่แท้จริงที่ต้องการ",
+          longDescription:
+            "ยิ่งเรารู้มากเกี่ยวกับความเสียหายและบาดแผลทางจิตใจที่เกิดขึ้นกับเหยื่อ เราก็ยิ่งรู้วิธีรักษาได้ดียิ่งขึ้น ไม่ใช่ «รักษาให้หาย» ซึ่งนั่นคือเหตุผลที่เห็นคำว่าการรักษาในเครื่องหมายคำพูด คุณไม่สามารถรักษาบาดแผลทางจิตใจได้อย่างสมบูรณ์ คุณแค่รักษาได้เท่านั้น",
+        },
+        "questions-nobody-wants-to-ask": {
+          label: "คำถามที่ไม่มีใครอยากถาม",
+          description: "การสนทนาที่ผู้คนหลีกเลี่ยง แม้จะจำเป็นเพียงใด",
+          longDescription:
+            "นี่คือคำถามยากๆ เกี่ยวกับพฤติกรรมมนุษย์ ความผิดปกติของครอบครัว และความล้มเหลวของสังคมที่แทบไม่เคยถูกถามอย่างดังพอ ทำไมเราจึงมองหน้าอื่น? ใครได้ประโยชน์จากความเงียบของเรา?",
+        },
+        "psychology-of-crime": {
+          label: "จิตวิทยาอาชญากรรม",
+          description: "มองข้ามป้ายกำกับและพาดหัวข่าวเพื่อถามคำถามที่ลึกกว่า",
+          longDescription:
+            "เมื่อมีการก่ออาชญากรรม ความเสียหายจะขยายออกไปไกลกว่าตัวเหตุการณ์เอง เหยื่อทุกข์ทรมาน ครอบครัวทุกข์ทรมาน ชุมชนทุกข์ทรมาน ส่วนนี้ถามคำถามที่ลึกกว่า: เกิดขึ้นได้อย่างไร? อะไรนำไปสู่มัน? สามารถป้องกันได้ไหม?",
+        },
+        "internet-takes": {
+          label: "ความคิดเห็นอินเทอร์เน็ต",
+          description: "วิเคราะห์ความเชื่อทางสังคมที่แพร่กระจายผ่านความคิดเห็นที่กำลังเป็นกระแส",
+          longDescription:
+            "โซเชียลมีเดียได้เปลี่ยนวิธีที่ผู้คนคิด พูด และสร้างความคิดเห็น ส่วนนี้ไม่ได้ตอบสนองต่อโซเชียลมีเดียในตัวเอง แต่ตอบสนองต่อความเชื่อทางสังคมที่อยู่เบื้องหลัง",
+        },
+      },
+    },
+    resources: {
+      label: "การอ่านเพิ่มเติม",
+      title: "แหล่งข้อมูล",
+      comingSoon: "แหล่งข้อมูลจะมาเร็วๆ นี้",
+      description: "หนังสือ งานวิจัย และการอ่านเพิ่มเติมจะแสดงที่นี่",
+    },
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  VI: {
+    subtitle: "Tâm lý học · Chấn thương · Tội phạm · Hành vi con người",
+    nav: {
+      home: "Trang chủ",
+      about: "Về tôi",
+      categories: "Danh mục",
+      contact: "Liên hệ",
+      resources: "Tài nguyên",
+      browseByCategory: "Duyệt theo danh mục",
+      viewAllCategories: "Xem tất cả danh mục →",
+    },
+    footer: {
+      subtitle: "Tâm lý học · Chấn thương · Tội phạm · Hành vi con người",
+    },
+    homepage: {
+      introQuote:
+        "Tôi tạo trang web này vì tôi không tin rằng những tội ác tàn khốc nhất trong xã hội là điều không thể tránh khỏi.",
+      intro1:
+        "Quá thường xuyên, mọi người chỉ chú ý khi thiệt hại đã xảy ra rồi. Điều tôi quan tâm hơn là những gì đã xảy ra trước đó: các dấu hiệu cảnh báo, trải nghiệm thời thơ ấu, động lực gia đình, vết thương cảm xúc, chấn thương chưa được điều trị, sự bất ổn.",
+      intro2:
+        "Một trong những lĩnh vực tôi thấy quan trọng nhất, và khó nói về nhất, là vai trò của thời thơ ấu và cách nuôi dạy con cái. Tôi tin rằng nhiều tội ác và hành vi đáng lo ngại nhất có thể được truy nguyên từ các mối quan hệ đầu đời, đặc biệt là mối quan hệ giữa đứa trẻ và cha mẹ.",
+      intro3:
+        "Những chủ đề này không thoải mái, nhạy cảm và thường bị hiểu lầm, đó chính xác là lý do tôi tin rằng chúng cần được thảo luận cởi mở hơn. Tâm lý động, hành vi con người, cảm xúc và những lý do sâu xa hơn đằng sau những gì mọi người làm. Trang web này không chỉ về tội phạm hay bi kịch. Nó về việc hiểu con người.",
+      pullQuote:
+        "Mục tiêu của tôi là làm cho những chủ đề này dễ hiểu hơn, dễ tiếp cận hơn với công chúng, và không thể bỏ qua, vì nhận thức quan trọng.",
+      featuredComingSoon: "Bài viết nổi bật sắp ra mắt",
+      featuredDescription: "Phần này sẽ nổi bật một lý thuyết hoặc bài viết mới mỗi tuần",
+      categoriesLabel: "Danh mục",
+      viewAll: "Xem tất cả →",
+      letsTalk: "Hãy nói chuyện",
+      theseConversations: "Những cuộc trò chuyện này\ncần phải xảy ra.",
+      silenceText:
+        "Sự im lặng là thứ cho phép các mô hình có hại tiếp tục. Dù bạn đang học tâm lý học, làm việc trong lĩnh vực này, hay chỉ đơn giản là người suy nghĩ sâu sắc về con người, đừng ngại tiếp cận.",
+      startConversation: "Bắt đầu cuộc trò chuyện",
+      talkQuote:
+        "Hãy cho tôi biết về các lý thuyết, ý kiến, câu hỏi của bạn, hoặc các chủ đề mà bạn nghĩ xứng đáng được chú ý hơn. Tôi muốn đây là nhiều hơn một trang web, một nơi mà mọi người có thể suy nghĩ, đặt câu hỏi và có những cuộc trò chuyện trung thực.",
+    },
+    about: {
+      label: "Về tôi",
+      openingQuote:
+        "Tôi tạo trang web này vì tôi không tin rằng những tội ác tàn khốc nhất trong xã hội là điều không thể tránh khỏi.",
+      para1:
+        "Quá thường xuyên, mọi người chỉ chú ý khi thiệt hại đã xảy ra rồi. Điều tôi quan tâm hơn là những gì đã xảy ra trước đó.",
+      para2:
+        "Các dấu hiệu cảnh báo. Trải nghiệm thời thơ ấu. Động lực gia đình. Vết thương cảm xúc. Chấn thương chưa được điều trị. Sự bất ổn.",
+      para3:
+        "Một trong những lĩnh vực quan trọng nhất là vai trò của thời thơ ấu và cách nuôi dạy con cái. Nhiều hành vi đáng lo ngại có thể được truy nguyên từ các mối quan hệ đầu đời, đặc biệt là sợi dây gắn kết giữa mẹ và con.",
+      para4:
+        "Những chủ đề này không thoải mái và thường bị hiểu lầm, đó chính xác là lý do chúng cần được thảo luận cởi mở hơn.",
+      para5:
+        "Trang web này không chỉ về tội phạm hay bi kịch. Nó về việc hiểu con người. Mục tiêu của tôi là làm cho những chủ đề này dễ tiếp cận và không thể bỏ qua.",
+      pullQuote:
+        "Tôi thấy khó để nói về kết quả nghiên cứu của mình theo cách thực sự mở mắt mọi người.",
+      areasOfFocus: "Lĩnh vực tập trung",
+      focusItems: [
+        "Tâm lý động",
+        "Thời thơ ấu và gắn bó sớm",
+        "Chấn thương và điều trị",
+        "Tâm lý tội phạm",
+        "Rối loạn chức năng gia đình",
+        "Hành vi con người và động cơ",
+      ],
+      wantToTalk: "Muốn nói chuyện?",
+      theseConversations: "Những cuộc trò chuyện này xứng đáng được thực hiện.",
+      getInTouch: "Liên hệ",
+    },
+    contact: {
+      label: "Liên hệ",
+      title: "Hãy nói chuyện",
+      openingQuote: "Sự im lặng chưa bao giờ bảo vệ được mọi người.",
+      para1:
+        "Chúng ta thấy điều này lặp đi lặp lại với chấn thương, lạm dụng, bạo lực, nghiện ngập, rối loạn chức năng gia đình, tự tử và tội phạm. Mọi người im lặng vì sợ hãi, xấu hổ hoặc phủ nhận. Nhưng sự im lặng là thứ cho phép các mô hình có hại tiếp tục.",
+      para2:
+        "Những cuộc trò chuyện này cần phải xảy ra. Dù bạn đang học tâm lý học, làm việc trong lĩnh vực này, hay chỉ là người suy nghĩ sâu sắc về con người, đừng ngại tiếp cận.",
+      para3:
+        "Hãy cho tôi biết về các lý thuyết, ý kiến, câu hỏi của bạn hoặc các chủ đề xứng đáng được chú ý hơn. Tôi rất muốn nghe.",
+      reachOutItems: [
+        "Chia sẻ một lý thuyết hoặc ý kiến",
+        "Đặt câu hỏi",
+        "Đề xuất chủ đề",
+        "Đưa ra phản hồi về trang web",
+      ],
+      name: "Tên",
+      email: "Email",
+      subject: "Chủ đề",
+      message: "Tin nhắn",
+      messagePlaceholder: "Lý thuyết, câu hỏi, ý kiến hoặc đề xuất chủ đề của bạn...",
+      send: "Gửi tin nhắn",
+      thankYouTitle: "Cảm ơn bạn đã liên hệ.",
+      thankYouBody:
+        "Tôi đã nhận được tin nhắn của bạn và sẽ phản hồi. Những cuộc trò chuyện này quan trọng, tôi vui mừng vì bạn đã bắt đầu một cuộc trò chuyện.",
+    },
+    categories: {
+      browse: "Duyệt",
+      title: "Danh mục",
+      articlesLabel: "Bài viết",
+      articlesComingSoon: "Bài viết sắp ra mắt",
+      articlesDescription: "Các bài viết mới sẽ xuất hiện ở đây khi được xuất bản",
+      items: {
+        "core-theories": {
+          label: "Lý thuyết cốt lõi",
+          description: "Những ý tưởng phức tạp, câu hỏi khó chịu và những cuộc trò chuyện đáng có.",
+          longDescription:
+            "Phần này khám phá các lý thuyết tâm lý học nền tảng làm cơ sở cho công việc về chấn thương, hành vi và tội phạm, từ lý thuyết gắn bó đến tâm lý động.",
+        },
+        "victims-and-healing": {
+          label: 'Nạn nhân và "Chữa lành"',
+          description: "Hiểu chấn thương để cho nạn nhân sự giúp đỡ thực sự mà họ cần.",
+          longDescription:
+            "Càng biết nhiều về tổn hại và chấn thương gây ra cho nạn nhân, chúng ta càng biết cách điều trị. Không phải «chữa lành», đó là lý do bạn thấy từ này trong dấu ngoặc kép. Bạn không bao giờ có thể chữa lành hoàn toàn một chấn thương. Bạn chỉ có thể điều trị nó.",
+        },
+        "questions-nobody-wants-to-ask": {
+          label: "Những câu hỏi không ai muốn hỏi",
+          description: "Những cuộc trò chuyện mọi người tránh né, dù cần thiết đến mức nào.",
+          longDescription:
+            "Đây là những câu hỏi khó về hành vi con người, rối loạn chức năng gia đình và thất bại xã hội hiếm khi được hỏi đủ lớn. Tại sao chúng ta nhìn đi chỗ khác? Ai được lợi từ sự im lặng của chúng ta?",
+        },
+        "psychology-of-crime": {
+          label: "Tâm lý tội phạm",
+          description: "Nhìn xa hơn nhãn hiệu và tiêu đề để đặt những câu hỏi sâu hơn.",
+          longDescription:
+            "Khi một tội ác được thực hiện, thiệt hại lan rộng ra ngoài bản thân sự kiện. Nạn nhân đau khổ, gia đình đau khổ, cộng đồng đau khổ. Phần này đặt những câu hỏi sâu hơn: Điều này xảy ra như thế nào? Điều gì dẫn đến nó? Có thể ngăn chặn được không?",
+        },
+        "internet-takes": {
+          label: "Ý kiến Internet",
+          description: "Phân tích các niềm tin xã hội được truyền bá qua các ý kiến lan truyền.",
+          longDescription:
+            "Mạng xã hội đã thay đổi cách mọi người suy nghĩ, nói chuyện và hình thành ý kiến. Phần này không phản ứng với chính mạng xã hội. Nó phản ứng với các niềm tin xã hội đằng sau nó, lấy những ý kiến, xu hướng và tuyên bố gây tranh cãi đó và phân tích chúng.",
+        },
+      },
+    },
+    resources: {
+      label: "Đọc thêm",
+      title: "Tài nguyên",
+      comingSoon: "Tài nguyên sắp ra mắt",
+      description: "Sách, nghiên cứu và tài liệu đọc thêm sẽ được liệt kê ở đây",
     },
   },
 };
