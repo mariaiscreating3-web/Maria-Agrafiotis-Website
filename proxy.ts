@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 const ADMIN_USER = process.env.ADMIN_USER ?? "maria";
 const ADMIN_PASS = process.env.ADMIN_PASS ?? "lovejews";
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const auth = req.headers.get("authorization");
 
   if (auth) {
