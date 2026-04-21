@@ -4,12 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { LayoutDashboard, FileText, PlusCircle, Eye, Menu, X } from "lucide-react";
+import { LayoutDashboard, FileText, PlusCircle, Eye, Menu, X, MessageSquare } from "lucide-react";
 
 const navItems = [
   { href: "/admin", label: "Overview", icon: LayoutDashboard, exact: true },
   { href: "/admin/posts", label: "All Posts", icon: FileText, exact: false },
   { href: "/admin/posts/new", label: "New Post", icon: PlusCircle, exact: true },
+  { href: "/admin/messages", label: "Messages", icon: MessageSquare, exact: false },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {

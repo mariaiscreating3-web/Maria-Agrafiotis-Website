@@ -21,8 +21,12 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const featuredPost = await getFeaturedPost();
-  const recentPosts = (await getPublishedPosts()).slice(0, 4);
+  let featuredPost = undefined;
+  let recentPosts: Awaited<ReturnType<typeof getPublishedPosts>> = [];
+  try {
+    featuredPost = await getFeaturedPost();
+    recentPosts = (await getPublishedPosts()).slice(0, 4);
+  } catch { /* DB not available — render empty state */ }
 
   return <HomeContent featuredPost={featuredPost} recentPosts={recentPosts} />;
 }

@@ -11,9 +11,26 @@ export function ContactContent() {
   const { t } = useLanguage();
   const c = t.contact;
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setSending(true);
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+    try {
+      await fetch("/api/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+    } catch { /* silent — still show thank you */ }
+    setSending(false);
     setSubmitted(true);
   }
 
@@ -88,10 +105,11 @@ export function ContactContent() {
               </div>
               <button
                 type="submit"
+                disabled={sending}
                 className="label-caps px-10 py-3 border transition-all ContactBtn"
-                style={{ fontFamily: "var(--font-raleway)", borderColor: "var(--burgundy)", color: "var(--burgundy)", background: "transparent", cursor: "pointer" }}
+                style={{ fontFamily: "var(--font-raleway)", borderColor: "var(--burgundy)", color: "var(--burgundy)", background: "transparent", cursor: sending ? "not-allowed" : "pointer", opacity: sending ? 0.6 : 1 }}
               >
-                {c.send}
+                {sending ? "Sending…" : c.send}
               </button>
             </form>
           )}

@@ -203,7 +203,7 @@ export function Navigation() {
                     key={l.code}
                     onClick={() => { setLang(l.code); setLangOpen(false); }}
                     className="w-full text-left px-4 py-2.5 flex items-center justify-between hover:bg-card transition-colors border-0 bg-transparent cursor-pointer"
-                    style={{ color: lang === l.code ? "var(--burgundy)" : "inherit" }}
+                    style={{ color: lang === l.code ? "var(--burgundy)" : "var(--muted-foreground)" }}
                   >
                     <span style={{ fontFamily: "var(--font-raleway)", letterSpacing: "0.25em", fontSize: "0.6rem", textTransform: "uppercase" }}>
                       {l.code}

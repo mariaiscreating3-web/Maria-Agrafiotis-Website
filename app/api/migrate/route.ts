@@ -34,7 +34,19 @@ export async function POST() {
     ON CONFLICT (id) DO NOTHING
   `;
 
-  return NextResponse.json({ success: true, message: "Table created and post seeded." });
+  await sql`
+    CREATE TABLE IF NOT EXISTS messages (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL DEFAULT '',
+      email TEXT NOT NULL DEFAULT '',
+      subject TEXT NOT NULL DEFAULT '',
+      message TEXT NOT NULL DEFAULT '',
+      read BOOLEAN NOT NULL DEFAULT FALSE,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    )
+  `;
+
+  return NextResponse.json({ success: true, message: "Tables created and post seeded." });
 }
 
 const SEED_CONTENT = `## Opening Statement
