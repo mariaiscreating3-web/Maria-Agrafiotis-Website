@@ -2,51 +2,52 @@ import { NextResponse } from "next/server";
 import { getSql } from "@/lib/db";
 
 export async function POST() {
-  const sql = getSql();
-  await sql`
-    CREATE TABLE IF NOT EXISTS posts (
-      id TEXT PRIMARY KEY,
-      title TEXT NOT NULL DEFAULT '',
-      slug TEXT NOT NULL DEFAULT '',
-      category TEXT NOT NULL DEFAULT '',
-      excerpt TEXT NOT NULL DEFAULT '',
-      content TEXT NOT NULL DEFAULT '',
-      date TEXT NOT NULL DEFAULT '',
-      published BOOLEAN NOT NULL DEFAULT FALSE,
-      featured BOOLEAN NOT NULL DEFAULT FALSE
-    )
-  `;
+  try {
+    const sql = getSql();
 
-  // Seed the existing post — ON CONFLICT means it's safe to run again
-  await sql`
-    INSERT INTO posts (id, title, slug, category, excerpt, content, date, published, featured)
-    VALUES (
-      '1745078400000',
-      'Addiction & Violence: Understanding the Connection',
-      'addiction-and-violence-understanding-the-connection',
-      'psychology-of-crime',
-      '35% of violent crime victims claimed their attacker was under the influence of alcohol at the time of the assault. When the attacker is an intimate partner, that number jumps to 67%. This is not about excusing perpetrators. This is about understanding how the cycle continues, and how we break it.',
-      ${SEED_CONTENT},
-      '2026-04-19',
-      TRUE,
-      TRUE
-    )
-    ON CONFLICT (id) DO NOTHING
-  `;
+    await sql`
+      CREATE TABLE IF NOT EXISTS posts (
+        id TEXT PRIMARY KEY,
+        title TEXT NOT NULL DEFAULT '',
+        slug TEXT NOT NULL DEFAULT '',
+        category TEXT NOT NULL DEFAULT '',
+        excerpt TEXT NOT NULL DEFAULT '',
+        content TEXT NOT NULL DEFAULT '',
+        date TEXT NOT NULL DEFAULT '',
+        published BOOLEAN NOT NULL DEFAULT FALSE,
+        featured BOOLEAN NOT NULL DEFAULT FALSE
+      )
+    `;
 
-  await sql`
-    CREATE TABLE IF NOT EXISTS messages (
-      id TEXT PRIMARY KEY,
-      name TEXT NOT NULL DEFAULT '',
-      email TEXT NOT NULL DEFAULT '',
-      subject TEXT NOT NULL DEFAULT '',
-      message TEXT NOT NULL DEFAULT '',
-      read BOOLEAN NOT NULL DEFAULT FALSE,
-      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-    )
-  `;
+    await sql`
+      CREATE TABLE IF NOT EXISTS messages (
+        id TEXT PRIMARY KEY,
+        name TEXT NOT NULL DEFAULT '',
+        email TEXT NOT NULL DEFAULT '',
+        subject TEXT NOT NULL DEFAULT '',
+        message TEXT NOT NULL DEFAULT '',
+        read BOOLEAN NOT NULL DEFAULT FALSE,
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `;
 
-  return NextResponse.json({ success: true, message: "Tables created and post seeded." });
+    const title = "Addiction & Violence: Understanding the Connection";
+    const slug = "addiction-and-violence-understanding-the-connection";
+    const category = "psychology-of-crime";
+    const excerpt = "35% of violent crime victims claimed their attacker was under the influence of alcohol at the time of the assault. When the attacker is an intimate partner, that number jumps to 67%. This is not about excusing perpetrators. This is about understanding how the cycle continues, and how we break it.";
+    const date = "2026-04-19";
+
+    await sql`
+      INSERT INTO posts (id, title, slug, category, excerpt, content, date, published, featured)
+      VALUES ('1745078400000', ${title}, ${slug}, ${category}, ${excerpt}, ${SEED_CONTENT}, ${date}, TRUE, TRUE)
+      ON CONFLICT (id) DO NOTHING
+    `;
+
+    return NextResponse.json({ success: true, message: "Tables created and post seeded." });
+  } catch (err) {
+    console.error("Migration error:", err);
+    return NextResponse.json({ success: false, error: String(err) }, { status: 500 });
+  }
 }
 
 const SEED_CONTENT = `## Opening Statement
